@@ -1,15 +1,18 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html ng-app="app" ng-controller="MyController" lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title>Alaska Airlines Software Configuration Tool</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script type="text/javascript" src="asct.js"></script>
+
     <link rel="stylesheet" href="ASCT_Style.css">
 </head>
 <body>
-    <h1 id="title">Alaska Airlines Software Configuration Tool</h1>
+    <h1 id="title-alaska">Alaska Airlines Software Configuration Tool</h1>
     <br>
     <div id="fleet-select">
         <button type="button" class="btn btn-outline-primary">Boeing</button>
@@ -38,7 +41,48 @@
     </div>
     <br />
     <div id="submit">
-        <input class="btn btn-primary" type="submit" value="Submit">
+        <input ng-click="openTable()" class="btn btn-primary" type="submit" value="Submit">
+    </div>
+    <br />
+    <br />
+
+    <div ng-show="isVisible" class="ng-hide">
+        <table class="table">
+
+            <tbody>
+                <tr>
+                    <th scope="row">LRU Name</th>
+                    <td>FMC</td>
+
+                </tr>
+                <tr>
+                    <th scope="row">LRU Part Number</th>
+                    <td>123</td>
+
+                </tr>
+                <tr>
+                    <th scope="row">Software Name</th>
+                    <td>1231445</td>
+
+                </tr>
+                <tr>
+                    <th scope="row">Software Part Number</th>
+                    <td>1231445</td>
+
+                </tr>
+                <tr>
+                    <th scope="row">EC Number</th>
+                    <td>1231445</td>
+
+                </tr>
+                <tr>
+                    <th scope="row">Pre Condition/Post Condition</th>
+                    <td>1231445</td>
+
+                </tr>
+
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
